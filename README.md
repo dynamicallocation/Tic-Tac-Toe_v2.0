@@ -10,17 +10,20 @@ If correctly guessed the player will be assigned the token X as their token if n
 The player will then be greeted by a board that looks like this
 
        
-         *       *
-     0   *  1    *   2
-         *       *   
-  -------+-------+-------
-         *       *
-     3   *   4   *    5
-         *       *
-  -------+-------+-------
-         *       *
-     6   *    7  *    8
-         *       *  
+                             *       *
+                         0   *  1    *   2
+                             *       *   
+                      -------+-------+-------
+                             *       *
+                         3   *   4   *   5
+                             *       *
+                      -------+-------+-------
+                             *       *
+                         6   *    7  *    8
+                             *       *  
+         
+         
+    
          
 Each number corresponds to a potential position either player may make. The number the player picks during their turn will determine where their token will be placed 
 
