@@ -1,56 +1,66 @@
 public class Referee
 {
+    Player player = new Player();
     
     
-    private boolean isWinner = false;
-    
-    
-    
-    
-    private boolean checkWinner()
+    private boolean declareWinner()
     {
-        combo.add(moves.getMove());
+        if(isHorizontal() || isVertical() || isDiagonal())
+        {
+           if(player.Turn().equals("player 1"))
+           {
+               System.out.println(player.getUname + " Won!")
+               
+           }
+           else
+           {
+               System.out.println([player.getUnameTwo() + " Won!")
+               
+           }
+           return true;
+        }
+        return false;
     }
     
     
     
-    
-    
-    
-    private void checkWin()
+    public boolean isHorizontal()
     {
-        switch(win)
+    if(!Board[0][0].equals(" ") && !Board[0][1].equals(" ") && !Board[0][2].equals(" ") || !Board[1][0].equals(" ") && !Board[1][1].equals(" ") && !Board[1][2].equals(" ")|| !Board[2][0].equals(" ")) && !Board[2][1].equals(" ") && !Board[2][2].equals(" "))
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+    
+    public boolean isVertical()
+    {
+        if(!Board[0][0].equals(" ") && !Board[1][0].equals(" ") && !Board[2][0].equals(" ") || !Board[0][1].equals(" ") && !Board[1][1].equals(" ") && !Board[2][1].equals(" ") || !Board[0][2].equals(" ")) && !Board[1][2].equals(" ") && !Board[2][2].equals(" "))
         {
-            case "012":
-                isWinner = true;
-                break;
-            case "345":
-                isWinner = true;
-                break;
-            case "678":
-                isWinner = true;
-                break;
-            case "048":
-                isWinner = true;
-                break;
-            case "036":
-                isWinner = true;
-                break;
-            case "147":
-                isWinner = true;
-                break;
-            case "258":
-                isWinner = true;
-                break;
-            case "246":
-                isWinner = true;
-                break;
-            default:
-                isWinner = false;
-                break;
-            
+            return true;
+        }
+        else
+        {
+            return false
+        }
+        
+    }
+    
+    public boolean isDiagonal
+    {
+        if(!Board[0][0].equals(" ") && !Board[1][1].equals(" ") && !Board[2][2] || !Board[0][2] && !Board[1][1] && !Board[2][0])
+        {
+            return true 
+        }
+        else
+        {
+            return false
         }
     }
+}
+
     
     
     

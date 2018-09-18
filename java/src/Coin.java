@@ -1,15 +1,14 @@
 public class Coin
 {
-    private ArrayList<String> sides = new ArrayList<String>;
-    private String answer;
-    public Coin(String answer)
+
+    public Coin(int answer)
     {
         this.answer = answer;
     }
     
-    public boolean getAnswer()
+    public int getAnswer()
     {
-        
+      
     }
 
 }
