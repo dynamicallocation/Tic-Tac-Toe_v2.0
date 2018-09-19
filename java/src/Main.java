@@ -5,16 +5,18 @@ public class Main
     {
         Scanner sc = new Scanner(System.in);
         Random rand = new Random();
-        Player player = new Player();
+        Board board = new Board();
+        Referee ref = new Referee();
+        Rules rules = new Rules();
         
-        
-        System.out.println("Welcome to Tic Tac Toe");
+        rules.intro();
+        rules.initDisplay();
         System.out.println("Player One please select a username");
         String usrOne = sc.nextLine();
         System.out.println("Player two please select a username");
         String usrTwo = sc.nextLine();
         Player player = new Player(usrOne,usrTwo);
-        System.out.println("Player 1: heads or tails");
+        System.out.println("Player: heads or tails");
         System.out.println("Enter: 0 for heads, 1 for tails");
         int answer = sc.nextInt();
         int result = rand.nextInt(2) + 1
@@ -34,13 +36,36 @@ public class Main
         
         while(true)
         {
+            Scanner moveScanner = new Scanner(System.in);
             
-            
-
-
-            
-            
-            
+            if(player.getP1())
+            {
+                System.out.println(p1.getUnameOne() + " Make your move");
+                board.displayBoard();
+                int playerMove = moveScanner.nextInt();
+                board.updateBoard(playerMove);
+                player.setTurn(false,false);
+                if(ref.checkWinner())
+                {
+                    break;
+                }
+            }
+            else if(player.getP2())
+            {
+                System.out.println(p2.getUnameOne() + " Make your move");
+                board.displayBoard();
+                int playerMove = moveScanner.nextInt();
+                board.updateBoard(playerMove);
+                player.setTurn(true,false);
+                if(ref.checkWinner())
+                {
+                    player.setTurn(false,false)
+                }
+            }
+            else
+            {
+                break;
+            }
         }
         
         

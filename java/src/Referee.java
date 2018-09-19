@@ -3,11 +3,11 @@ public class Referee
     Player player = new Player();
     
     
-    private boolean declareWinner()
+    private boolean checkWinner()
     {
         if(isHorizontal() || isVertical() || isDiagonal())
         {
-           if(player.Turn().equals("player 1"))
+           if(player.getP1)
            {
                System.out.println(player.getUname + " Won!")
                
