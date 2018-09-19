@@ -19,9 +19,19 @@ public class Player
         return unameTwo;
     }
     
-    public boolean getTurn()
+    public void setTurn(boolean isPlayerOne,boolean isPlayerTwo)
     {
-        
+        this.isPlayerOne = isPlayerOne;
+        this.isPlayerTwo = isPlayerTwo;
+    }
+    
+    public boolean getP1()
+    {
+        return isPlayerOne;
+    }
+    public boolean getP2()
+    {
+        return isPlayerTwo;
     }
     
     

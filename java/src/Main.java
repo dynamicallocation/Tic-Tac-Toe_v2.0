@@ -21,6 +21,7 @@ public class Main
         {
             System.out.println("Correct Player one goes first");
             
+            
         }
         else
         {
@@ -30,10 +31,7 @@ public class Main
         
         while(true)
         {
-            if(sides.equals())
-            {
-                 System.out.println(player.getunameOne() + " goes first");
-            }
+            
 
 
             
