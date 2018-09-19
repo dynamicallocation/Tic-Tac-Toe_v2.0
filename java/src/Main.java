@@ -15,7 +15,6 @@ public class Main
         String usrOne = sc.nextLine();
         System.out.println("Player two please select a username");
         String usrTwo = sc.nextLine();
-        Player player = new Player(usrOne,usrTwo);
         System.out.println("Player: heads or tails");
         System.out.println("Enter: 0 for heads, 1 for tails");
         int answer = sc.nextInt();
@@ -44,10 +43,10 @@ public class Main
                 board.displayBoard();
                 int playerMove = moveScanner.nextInt();
                 board.updateBoard(playerMove);
-                player.setTurn(false,false);
+                player.setTurn(true,false);
                 if(ref.checkWinner())
                 {
-                    break;
+                    player.setTurn(false,false);
                 }
             }
             else if(player.getP2())
@@ -56,7 +55,7 @@ public class Main
                 board.displayBoard();
                 int playerMove = moveScanner.nextInt();
                 board.updateBoard(playerMove);
-                player.setTurn(true,false);
+                player.setTurn(false,true);
                 if(ref.checkWinner())
                 {
                     player.setTurn(false,false)
@@ -64,9 +63,21 @@ public class Main
             }
             else
             {
-                break;
+                System.out.println("Would you like to play again y/n");
+                String answer = sc.nextLine();
+                if(answer.equals("y"))
+                {
+                    board.createBoard();
+                    continue;
+                }
+                else
+                {
+                    break;
+                }
             }
         }
+        
+        
         
         
     }

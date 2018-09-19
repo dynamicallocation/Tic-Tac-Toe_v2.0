@@ -1,7 +1,7 @@
 public class Board 
 {
     
-    private String[][] domain;
+    private String[][] board
     private static int ROW; 
     private static int COLUMN;
     private static String BLANK = " ";
@@ -12,15 +12,15 @@ public class Board
     
     public int[] createBoard()
     {
-        for(int i = 0; i < domain.length(); i++)
+        for(int i = 0; i < board.length(); i++)
         {
-            for(int j = 0; j < domain.length();j++)
+            for(int j = 0; j < board.length();j++)
             board[i][j] = BLANK;
         }
         //return board;
     }
     
-    public void displayBoard(array board)
+    public void displayBoard(int[][] board)
     {
         System.out.println("\n\t",board[0][0],"|",board[0][1],"|",board[0][2]);
         System.out.println("\t", "---------");
@@ -30,11 +30,13 @@ public class Board
         
     }
     
+   
+    
     public void updateBoard(int move)
     {
-        String turn = player.getTurn();
         
-        if(turn.equals("player1"))
+        
+        if()
         {
             board[i][j] = "X";
         }
@@ -44,8 +46,8 @@ public class Board
         }
     }
     
-    public int[] getBoard()
+    public int[][] getBoard()
     {
-        return Board;
+        return board;
     }
 }
