@@ -17,7 +17,7 @@ public class Board
             for(int j = 0; j < domain.length();j++)
             board[i][j] = BLANK;
         }
-        return board;
+        //return board;
     }
     
     public void displayBoard(array board)

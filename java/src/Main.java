@@ -5,6 +5,7 @@ public class Main
     {
         Scanner sc = new Scanner(System.in);
         Random rand = new Random();
+        Player player = new Player();
         
         
         System.out.println("Welcome to Tic Tac Toe");
@@ -20,17 +21,20 @@ public class Main
         if(answer == result)
         {
             System.out.println("Correct Player one goes first");
+            player.setTurn(true,false);
             
             
         }
         else
         {
             System.out.println("Incorrect Player two goes first")
+            player.setTurn(false,true);
         }
         
         
         while(true)
         {
+            
             
 
 
