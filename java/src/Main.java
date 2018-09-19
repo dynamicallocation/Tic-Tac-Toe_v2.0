@@ -65,15 +65,24 @@ public class Main
             {
                 System.out.println("Would you like to play again y/n");
                 String answer = sc.nextLine();
-                if(answer.equals("y"))
+                try
                 {
-                    board.createBoard();
-                    continue;
+                    if(answer.equals("y"))
+                    {
+                        board.createBoard();
+                        continue;
+                    }
+                    else if(answer.equals("n"))
+                    {
+                        break;
+                    }
                 }
-                else
+                catch(IllegalArgumentExceptoin e)
                 {
-                    break;
+                    System.out.println(e.toString() + " is an invalid answer please type y/n");
                 }
+
+               
             }
         }
         
