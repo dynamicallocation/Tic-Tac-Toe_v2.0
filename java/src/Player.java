@@ -22,23 +22,26 @@ public class Player
         return unameTwo;
     }
     
-    public boolean getX()
-    {
-        return isFirst();
-    }
-    
-    public boolean getO()
-    {
-        return isSecond();
-    }
-    
-    public void setTurn(boolean isPlayerOne,boolean isPlayerTwo,boolean isFirst,boolean isSecond)
+   
+    public void setTurn(boolean isPlayerOne,boolean isPlayerTwo)
     {
         this.isPlayerOne = isPlayerOne;
         this.isPlayerTwo = isPlayerTwo;
-        this.isSecond = isSecond;
+    }
+    
+    public void setTurn(boolean isPlayerOne,boolean isPlayerTwo,boolean isFirst)
+    {
+        this.isPlayerOne = isplayerOne;
+        this.isPlayerTwo = isPlayerTwo;
         this.isFirst = isFirst;
     }
+    
+    public boolean getX()
+    {
+        return isFirst;
+    }
+    
+    
     
     public boolean getP1()
     {

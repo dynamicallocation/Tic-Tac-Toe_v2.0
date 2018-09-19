@@ -36,7 +36,7 @@ public class Board
     {
         
         
-        if()
+        if(player.getX())
         {
             board[i][j] = "X";
         }
