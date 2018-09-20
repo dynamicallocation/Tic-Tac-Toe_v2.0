@@ -4,18 +4,18 @@ public class Referee
     Board board = new Board();
     
     
-    private boolean checkWinner()
+    public boolean checkWinner()
     {
-        if(isHorizontal() || isVertical() || isDiagonal())
+        if(isHorizontal(board.getBoard()) || isVertical(board.getBoard()) || isDiagonal(board.getBoard()))
         {
-           if(player.getP1)
+           if(player.getP1())
            {
-               System.out.println(player.getUname + " Won!")
+               System.out.println(player.getunameOne() + " Won!");
                
            }
            else
            {
-               System.out.println([player.getUnameTwo() + " Won!")
+               System.out.println(player.getunameTwo() + " Won!");
                
            }
            return true;
@@ -25,39 +25,41 @@ public class Referee
     
     
     
-    public boolean isHorizontal(board.getboard())
+    public boolean isHorizontal(String[][] board)
     {
-    if(!board[0][0].equals(" ") && !board[0][1].equals(" ") && !board[0][2].equals(" ") || !board[1][0].equals(" ") && !board[1][1].equals(" ") && !board[1][2].equals(" ")|| !board[2][0].equals(" ")) && !board[2][1].equals(" ") && !board[2][2].equals(" "))
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
+        if(!board[0][0].equals(" ") && !board[0][1].equals(" ") && !board[0][2].equals(" ") || !board[1][0].equals(" ") && !board[1][1].equals(" ") && !board[1][2].equals(" ") || !board[2][0].equals(" ") && !board[2][1].equals(" ") && !board[2][2].equals(" "))
+        {
+            return true;
+        }
+        else
+         {
+              return false;
+        }
+}
+
     
-    public boolean isVertical()
+    public boolean isVertical(String[][] board)
     {
-        if(!board[0][0].equals(" ") && !board[1][0].equals(" ") && !board[2][0].equals(" ") || !board[0][1].equals(" ") && !board[1][1].equals(" ") && !board[2][1].equals(" ") || !board[0][2].equals(" ")) && !board[1][2].equals(" ") && !board[2][2].equals(" "))
+        if(!board[0][0].equals(" ") && !board[1][0].equals(" ") && !board[2][0].equals(" ") || !board[0][1].equals(" ") && !board[1][1].equals(" ") && !board[2][1].equals(" ") || !board[0][2].equals(" ") && !board[1][2].equals(" ") && !board[2][2].equals(" "))
         {
             return true;
         }
         else
         {
-            return false
+            return false;
         }
         
     }
     
-    public boolean isDiagonal
+    public boolean isDiagonal(String[][] board)
     {
-        if(!board[0][0].equals(" ") && !board[1][1].equals(" ") && !board[2][2] || !board[0][2] && !board[1][1] && !board[2][0])
+        if(!board[0][0].equals(" ") && !board[1][1].equals(" ") && !board[2][2].equals(" ") || !board[0][2].equals(" ") && !board[1][1].equals(" ") && !board[2][0].equals(" "))
         {
-            return true 
+            return true;
         }
         else
         {
-            return false
+            return false;
         }
     }
 }
@@ -65,9 +67,3 @@ public class Referee
     
     
     
-    
-    
-   
-    
-    
-}

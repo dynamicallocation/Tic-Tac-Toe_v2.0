@@ -3,6 +3,8 @@ public class Player
     
     private boolean isPlayerOne;
     private boolean isPlayerTwo;
+    private String unameOne;
+    private String unameTwo;
     private boolean isFirst;
     private boolean isSecond;
     
@@ -11,6 +13,10 @@ public class Player
         this.unameOne = unameOne;
         this.unameTwo = unameTwo;
       
+    }
+    public Player()
+    {
+        
     }
     
     public String getunameOne()
@@ -22,6 +28,8 @@ public class Player
         return unameTwo;
     }
     
+    
+    
    
     public void setTurn(boolean isPlayerOne,boolean isPlayerTwo)
     {
@@ -29,11 +37,21 @@ public class Player
         this.isPlayerTwo = isPlayerTwo;
     }
     
-    public void setTurn(boolean isPlayerOne,boolean isPlayerTwo,boolean isFirst)
+    public void setTurn(boolean isPlayerOne,boolean isPlayerTwo,boolean isFirst,boolean isSecond)
     {
-        this.isPlayerOne = isplayerOne;
+        this.isPlayerOne = isPlayerOne;
         this.isPlayerTwo = isPlayerTwo;
         this.isFirst = isFirst;
+        this.isSecond = isSecond;
+    }
+    
+    public boolean getFirst()
+    {
+        return isFirst;
+    }
+    public boolean getSecond()
+    {
+        return isSecond;
     }
     
     public boolean getX()

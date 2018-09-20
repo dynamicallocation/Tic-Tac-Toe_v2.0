@@ -1,0 +1,17 @@
+Bug 1: 
+Null pointer exception when initiating a coin flip to see who goeas firse 
+
+Location: Board.displayBoard(Board.java:21)
+
+Cause: Forgot to initialize board before displaying it. Resulting in a reference to a null array
+
+Bug 2:
+X and O is missaligned
+
+Cause: No padding provided by empty string
+
+Solution: add extra whitespace to allign board components
+
+
+Bug 3:
+whoever goes first is stuck in an infinite loop where they keep playing.

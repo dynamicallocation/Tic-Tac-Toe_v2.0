@@ -1,4 +1,4 @@
-public class rules 
+public class Rules 
 {
     public void intro()
     {
