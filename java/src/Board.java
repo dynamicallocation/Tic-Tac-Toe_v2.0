@@ -10,22 +10,23 @@ public class Board
     private Player player = new Player();
     
     
-    public void createBoard()
+    public String[][] createBoard()
     {
         for(int i = 0; i < ROW; i++)
         {
             for(int j = 0; j < COLUMN;j++)
             board[i][j] = BLANK;
         }
+        return board;
     }
     
     public void displayBoard()
     {
-        System.out.println("\n\t" + board[0][0] + "|" + board[0][1] + "|" + board[0][2]);
-        System.out.println("\t---------");
-        System.out.println("\t" + board[1][0] + "|" + board[1][1] + "|" + board[1][2]);
-        System.out.println("\t---------");
-        System.out.println("\t" + board[2][0] + "|" + board[2][1] + "|" + board[2][2] + "\n");
+        System.out.println("\n\t" + board[0][0] + "  |" + board[0][1] + "  |" + board[0][2]);
+        System.out.println("\t-----------");
+        System.out.println("\t" + board[1][0] + "  |" + board[1][1] + "  |" + board[1][2]);
+        System.out.println("\t-----------");
+        System.out.println("\t" + board[2][0] + "  |" + board[2][1] + "  |" + board[2][2] + "\n");
         
     }
     
@@ -33,20 +34,25 @@ public class Board
     
     public void updateBoard(int row,int column,boolean first)
     {
-        
+        StringBuilder sb = new StringBuilder();
+        String rc = Integer.toString(row) + Integer.toString(column);
         
         if(first)
         {
             board[row][column] = "X";
+    
+            
+            
         }
         else
         {
             board[row][column] = "O"; 
+        
         }
     }
     
-    public String[][] getBoard()
+   /* public String[][] getBoard()
     {
         return board;
-    }
+    }*/
 }

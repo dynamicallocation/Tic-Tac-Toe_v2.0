@@ -1,8 +1,8 @@
-[0m[[0m[31merror[0m] [0m[0m/projects/Tic-Tac-Toe/java/src/Player.java:50:1: incompatible types: unexpected return value[0m
-[0m[[0m[31merror[0m] [0m[0m        return isFirst;[0m
-[0m[[0m[31merror[0m] [0m[0m/projects/Tic-Tac-Toe/java/src/Player.java:54:1: incompatible types: unexpected return value[0m
-[0m[[0m[31merror[0m] [0m[0m        return isSecond;[0m
-[0m[[0m[31merror[0m] [0m[0m/projects/Tic-Tac-Toe/java/src/Main.java:53:1: 'void' type not allowed here[0m
-[0m[[0m[31merror[0m] [0m[0m                board.updateBoard(playerRow,playerColumn,player.getFirst());[0m
-[0m[[0m[31merror[0m] [0m[0m/projects/Tic-Tac-Toe/java/src/Main.java:68:1: 'void' type not allowed here[0m
-[0m[[0m[31merror[0m] [0m[0m                board.updateBoard(playerRow,playerColumn,player.getSecond());[0m
+[0m[[0m[31merror[0m] [0m[0m/projects/Tic-Tac-Toe/java/src/Board.java:43:1: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m  symbol:   variable move[0m
+[0m[[0m[31merror[0m] [0m[0m  location: class Board[0m
+[0m[[0m[31merror[0m] [0m[0m            move.setXMove(sb.append(rc));[0m
+[0m[[0m[31merror[0m] [0m[0m/projects/Tic-Tac-Toe/java/src/Board.java:50:1: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m  symbol:   variable move[0m
+[0m[[0m[31merror[0m] [0m[0m  location: class Board[0m
+[0m[[0m[31merror[0m] [0m[0m            move.setOMove(sb.append(rc));[0m

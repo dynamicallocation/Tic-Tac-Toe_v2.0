@@ -9,7 +9,8 @@ public class Main
         Referee ref = new Referee();
         Rules rules = new Rules();
         
-        board.createBoard();
+        StringBuilder sb = new StringBuilder();
+        String[][] theBoard = board.createBoard();
         rules.intro();
         rules.initDisplay();
         System.out.println("Player One please select a username");
@@ -50,12 +51,13 @@ public class Main
                 int playerRow = sc.nextInt();
                 System.out.println("enter a column");
                 int playerColumn = sc.nextInt();
+                String rc = Integer.toString(playerRow) + Integer.toString(playerColumn);
                 board.updateBoard(playerRow,playerColumn,player.getFirst());
                 player.setTurn(false,true);
-               /* if(ref.checkWinner())
+                if(ref.checkWinner(theBoard))
                 {
                     player.setTurn(false,false);
-                }*/
+                }
             }
             else if(player.getP2())
             {
@@ -65,12 +67,14 @@ public class Main
                 int playerRow = sc.nextInt();
                 System.out.println("Enter a column");
                 int playerColumn = sc.nextInt();
+                String rc = Integer.toString(playerRow) + Integer.toString(playerColumn);
+                
                 board.updateBoard(playerRow,playerColumn,player.getSecond());
                 player.setTurn(true,false);
-               /* if(ref.checkWinner())
+               if(ref.checkWinner(theBoard))
                 {
                     player.setTurn(false,false);
-                }*/
+                }
             }
             else
             {

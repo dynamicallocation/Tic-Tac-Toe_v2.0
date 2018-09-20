@@ -54,13 +54,6 @@ public class Player
         return isSecond;
     }
     
-    public boolean getX()
-    {
-        return isFirst;
-    }
-    
-    
-    
     public boolean getP1()
     {
         return isPlayerOne;
