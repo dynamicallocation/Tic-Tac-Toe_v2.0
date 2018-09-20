@@ -9,16 +9,7 @@ public class Referee
         
         if(isVertical(theBoard) || isHorizontal(theBoard) || isDiagonal(theBoard))
         {
-           if(player.getP1())
-           {
-               System.out.println(player.getunameOne() + " Won");
-               
-           }
-           else
-           {
-               System.out.println(player.getunameTwo() + " Won");
-               
-           }
+           
            return true;
         }
         return false;

@@ -87,3 +87,6 @@ compile
 run
 git add .
 exit
+compile
+run
+exit

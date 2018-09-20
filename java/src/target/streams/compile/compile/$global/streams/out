@@ -1,8 +1,6 @@
-[0m[[0m[31merror[0m] [0m[0m/projects/Tic-Tac-Toe/java/src/Board.java:43:1: cannot find symbol[0m
-[0m[[0m[31merror[0m] [0m[0m  symbol:   variable move[0m
-[0m[[0m[31merror[0m] [0m[0m  location: class Board[0m
-[0m[[0m[31merror[0m] [0m[0m            move.setXMove(sb.append(rc));[0m
-[0m[[0m[31merror[0m] [0m[0m/projects/Tic-Tac-Toe/java/src/Board.java:50:1: cannot find symbol[0m
-[0m[[0m[31merror[0m] [0m[0m  symbol:   variable move[0m
-[0m[[0m[31merror[0m] [0m[0m  location: class Board[0m
-[0m[[0m[31merror[0m] [0m[0m            move.setOMove(sb.append(rc));[0m
+[0m[[0m[31merror[0m] [0m[0m/projects/Tic-Tac-Toe/java/src/Main.java:93:1: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m  symbol:   variable isWinOne[0m
+[0m[[0m[31merror[0m] [0m[0m  location: class Main[0m
+[0m[[0m[31merror[0m] [0m[0m                      if(isWinOne)[0m
+[0m[[0m[31merror[0m] [0m[0m/projects/Tic-Tac-Toe/java/src/Main.java:93:1: illegal start of type[0m
+[0m[[0m[31merror[0m] [0m[0m                      if(isWinOne)[0m

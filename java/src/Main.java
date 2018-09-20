@@ -8,9 +8,10 @@ public class Main
         Board board = new Board();
         Referee ref = new Referee();
         Rules rules = new Rules();
+        String[][] theBoard;
         
         StringBuilder sb = new StringBuilder();
-        String[][] theBoard = board.createBoard();
+        theBoard = board.createBoard();
         rules.intro();
         rules.initDisplay();
         System.out.println("Player One please select a username");
@@ -39,8 +40,6 @@ public class Main
         
         while(true)
         {
-            System.out.println(player.getP1());
-            System.out.println(player.getP2());
            
             
             if(player.getP1())
@@ -57,6 +56,7 @@ public class Main
                 if(ref.checkWinner(theBoard))
                 {
                     player.setTurn(false,false);
+                    player.setWinner(true,false);
                 }
             }
             else if(player.getP2())
@@ -73,7 +73,10 @@ public class Main
                 player.setTurn(true,false);
                if(ref.checkWinner(theBoard))
                 {
+                    System.out.println(player.getunameTwo() + " won");
                     player.setTurn(false,false);
+                    player.setWinner(false,true);
+                    
                 }
             }
             else
@@ -84,7 +87,15 @@ public class Main
                 {
                     if(answer.equals("y"))
                     {
-                        board.createBoard();
+                      theBoard = board.createBoard();
+                      if(player.isWinOne())
+                      {
+                          player.setTurn(true,false);
+                      }
+                      else
+                      {
+                          player.setTurn(false,true);
+                      }
                         continue;
                     }
                     else if(answer.equals("n"))

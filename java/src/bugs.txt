@@ -15,3 +15,15 @@ Solution: add extra whitespace to allign board components
 
 Bug 3:
 whoever goes first is stuck in an infinite loop where they keep playing.
+
+Cause: Uname matched so it seemed like this was the case but it wasn't.
+
+Solution: assigned correct usernames
+
+Bug 4:
+When game is reset it ends as soon as it begins
+
+cause: turns our set to both false and our never switched back
+
+Solution: Allow whoever wins the game to make the first move
+

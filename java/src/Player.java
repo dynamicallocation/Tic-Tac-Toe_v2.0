@@ -7,6 +7,8 @@ public class Player
     private String unameTwo;
     private boolean isFirst;
     private boolean isSecond;
+    private boolean winp1;
+    private boolean winp2;
     
     public Player(String unameOne,String unameTwo)
     {
@@ -28,8 +30,21 @@ public class Player
         return unameTwo;
     }
     
+    public void setWinner(boolean winp1,boolean winp2)
+    {
+        this.winp1 = winp1;
+        this.winp2 = winp2;
+    }
     
+    public boolean isWinOne()
+    {
+        return winp1;
+    }
     
+    public boolean iswinTwo()
+    {
+        return winp2;
+    }
    
     public void setTurn(boolean isPlayerOne,boolean isPlayerTwo)
     {
@@ -62,6 +77,8 @@ public class Player
     {
         return isPlayerTwo;
     }
+    
+
     
     
 }
