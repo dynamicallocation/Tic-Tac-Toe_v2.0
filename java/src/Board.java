@@ -32,23 +32,24 @@ public class Board
     
    
     
-    public void updateBoard(int row,int column,boolean first)
+    public boolean updateBoard(int row,int column,boolean first)
     {
-        StringBuilder sb = new StringBuilder();
-        String rc = Integer.toString(row) + Integer.toString(column);
         
-        if(first)
+        if(board[row][column].equals(BLANK))
         {
-            board[row][column] = "X";
-    
-            
-            
+            if(first)
+            {
+                board[row][column] = "X";
+                return true;
+            }
+            else
+            {
+                board[row][column] = "O"; 
+                return true;
+            }
         }
-        else
-        {
-            board[row][column] = "O"; 
-        
-        }
+        return false;
+
     }
     
    /* public String[][] getBoard()

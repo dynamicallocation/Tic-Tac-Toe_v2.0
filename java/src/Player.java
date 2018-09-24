@@ -41,7 +41,7 @@ public class Player
         return winp1;
     }
     
-    public boolean iswinTwo()
+    public boolean isWinTwo()
     {
         return winp2;
     }

@@ -15,6 +15,15 @@ public class Referee
         return false;
     }
     
+    public boolean checkDraw(String[][] theBoard)
+    {
+        if(isDraw(theBoard) == 9)
+        {
+            return true;
+        }
+        return false;
+    }
+    
     
     
     public boolean isHorizontal(String[][] board)
@@ -53,6 +62,23 @@ public class Referee
         {
             return false;
         }
+    }
+    
+    public int isDraw(String[][] board)
+    {
+        int sum = 0;
+        for(int i = 0; i < 3; i++)
+        {
+            for(int j = 0; j < 3; j++)
+            {
+                if(board[i][j].equals("X") || board[i][j].equals("O"))
+                {
+                    sum++;
+                    System.out.println(sum);
+                }
+            }
+        }
+        return sum;
     }
     
    

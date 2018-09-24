@@ -40,9 +40,32 @@ public class Main
         
         while(true)
         {
+            
+              if(player.getP1() && player.getP2())
+            {
+                
+                 System.out.println("Player: heads or tails");
+                 System.out.println("Enter: 0 for heads, 1 for tails");
+                 ansr = sc.nextInt();
+                 result = rand.nextInt(2) + 1;
+                if(ansr == result)
+                {
+                    System.out.println("Correct Player one goes first");
+                    player.setTurn(true,false,true,false);
+            
+            
+            
+                 }
+                else
+                 {
+                     System.out.println("Incorrect Player two goes first");
+                    player.setTurn(false,true,false,true);
+                 }
+                
+                  }
            
             
-            if(player.getP1())
+             else if(player.getP1())
             {
                 System.out.println(player.getunameOne() + " Make your move");
                 board.displayBoard();
@@ -50,26 +73,39 @@ public class Main
                 int playerRow = sc.nextInt();
                 System.out.println("enter a column");
                 int playerColumn = sc.nextInt();
-                String rc = Integer.toString(playerRow) + Integer.toString(playerColumn);
-                board.updateBoard(playerRow,playerColumn,player.getFirst());
+                if(!board.updateBoard(playerRow,playerColumn,player.getFirst()))
+                {
+                    System.out.println("Please place your token in an empty area of the board");
+                    continue;
+                }
+
                 player.setTurn(false,true);
                 if(ref.checkWinner(theBoard))
                 {
                     player.setTurn(false,false);
                     player.setWinner(true,false);
                 }
+                else if(ref.checkDraw(theBoard))
+                {
+                    System.out.println("Nobody Won");
+                    player.setTurn(false,false);
+                    player.setWinner(false,false);
+                }
             }
             else if(player.getP2())
             {
+                
                 System.out.println(player.getunameTwo() + " Make your move");
                 board.displayBoard();
                 System.out.println("Enter a row");
                 int playerRow = sc.nextInt();
                 System.out.println("Enter a column");
                 int playerColumn = sc.nextInt();
-                String rc = Integer.toString(playerRow) + Integer.toString(playerColumn);
-                
-                board.updateBoard(playerRow,playerColumn,player.getSecond());
+                if(!board.updateBoard(playerRow,playerColumn,player.getSecond()))
+                {
+                    System.out.println("Please place your token in an empty area of the board");
+                    continue;
+                }
                 player.setTurn(true,false);
                if(ref.checkWinner(theBoard))
                 {
@@ -78,7 +114,14 @@ public class Main
                     player.setWinner(false,true);
                     
                 }
+                else if(ref.checkDraw(theBoard))
+                {
+                    System.out.println("Nobody Won");
+                    player.setTurn(false,false);
+                    player.setWinner(false,false);
+                }
             }
+       
             else
             {
                 System.out.println("Would you like to play again y/n");
@@ -92,9 +135,13 @@ public class Main
                       {
                           player.setTurn(true,false);
                       }
-                      else
+                      else if(player.isWinTwo())
                       {
                           player.setTurn(false,true);
+                      }
+                      else
+                      {
+                          player.setTurn(true,true);
                       }
                         continue;
                     }
@@ -112,9 +159,6 @@ public class Main
             }
         }
         
-        
-        
-        
-    }
+     }
 
 }

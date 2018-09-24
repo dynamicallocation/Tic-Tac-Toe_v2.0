@@ -1,6 +1,10 @@
-[0m[[0m[31merror[0m] [0m[0m/projects/Tic-Tac-Toe/java/src/Main.java:93:1: cannot find symbol[0m
-[0m[[0m[31merror[0m] [0m[0m  symbol:   variable isWinOne[0m
-[0m[[0m[31merror[0m] [0m[0m  location: class Main[0m
-[0m[[0m[31merror[0m] [0m[0m                      if(isWinOne)[0m
-[0m[[0m[31merror[0m] [0m[0m/projects/Tic-Tac-Toe/java/src/Main.java:93:1: illegal start of type[0m
-[0m[[0m[31merror[0m] [0m[0m                      if(isWinOne)[0m
+[0m[[0m[31merror[0m] [0m[0m/projects/Tic-Tac-Toe/java/src/Board.java:43:1: incompatible types: unexpected return value[0m
+[0m[[0m[31merror[0m] [0m[0m                return true;[0m
+[0m[[0m[31merror[0m] [0m[0m/projects/Tic-Tac-Toe/java/src/Board.java:48:1: incompatible types: unexpected return value[0m
+[0m[[0m[31merror[0m] [0m[0m                return true;[0m
+[0m[[0m[31merror[0m] [0m[0m/projects/Tic-Tac-Toe/java/src/Board.java:51:1: incompatible types: unexpected return value[0m
+[0m[[0m[31merror[0m] [0m[0m        return false;[0m
+[0m[[0m[31merror[0m] [0m[0m/projects/Tic-Tac-Toe/java/src/Main.java:76:1: 'void' type not allowed here[0m
+[0m[[0m[31merror[0m] [0m[0m                if(!board.updateBoard(playerRow,playerColumn,player.getFirst()))[0m
+[0m[[0m[31merror[0m] [0m[0m/projects/Tic-Tac-Toe/java/src/Main.java:104:1: 'void' type not allowed here[0m
+[0m[[0m[31merror[0m] [0m[0m                if(!board.updateBoard(playerRow,playerColumn,player.getSecond()))[0m

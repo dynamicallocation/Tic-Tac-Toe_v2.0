@@ -27,3 +27,10 @@ cause: turns our set to both false and our never switched back
 
 Solution: Allow whoever wins the game to make the first move
 
+Bug 5:
+When it was a draw a coin toss wasn't re-instantiated to decide who would go first again. 
+
+Cause: an if statement that took two trues to execute wasn't being executed because of two if blocks before it
+
+Solution: Made it the first executable if statement in the while loop to eliminate false positives
+
