@@ -1,0 +1,1 @@
+Design of the board was influenced by a one dimensional version implemented in Python Programming for The Absolute Begginer Third Edition
