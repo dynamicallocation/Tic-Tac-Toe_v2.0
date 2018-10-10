@@ -9,9 +9,9 @@ public class Main
         Referee ref = new Referee();
         Rules rules = new Rules();
         String[][] theBoard;
-        
-        StringBuilder sb = new StringBuilder();
         theBoard = board.createBoard();
+        int p1Score = 0;
+        int p2Score = 0;
         rules.intro();
         rules.initDisplay();
         System.out.println("Player One please select a username");
@@ -40,6 +40,8 @@ public class Main
         
         while(true)
         {
+            System.out.println("player 1 won " + p1Score + " times");
+            System.out.println("Player 2 won " + p2Score + " times");
             
               if(player.getP1() && player.getP2())
             {
@@ -84,6 +86,8 @@ public class Main
                 {
                     player.setTurn(false,false);
                     player.setWinner(true,false);
+                    p1Score++;
+                    //Set Jlabel here
                 }
                 else if(ref.checkDraw(theBoard))
                 {
@@ -112,6 +116,8 @@ public class Main
                     System.out.println(player.getunameTwo() + " won");
                     player.setTurn(false,false);
                     player.setWinner(false,true);
+                    p2Score++;
+                    //Set JLabel Here
                     
                 }
                 else if(ref.checkDraw(theBoard))

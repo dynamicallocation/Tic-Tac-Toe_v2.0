@@ -131,3 +131,11 @@ compile
 run
 git add . 
 exit
+compile
+run
+compile
+run
+compile
+run
+compile
+run
