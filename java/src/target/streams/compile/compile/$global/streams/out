@@ -1,16 +1,4 @@
-[0m[[0m[31merror[0m] [0m[0m/projects/Tic-Tac-Toe/java/src/Main.java:41:1: cannot find symbol[0m
-[0m[[0m[31merror[0m] [0m[0m  symbol:   variable p1Score[0m
+[0m[[0m[31merror[0m] [0m[0m/projects/Tic-Tac-Toe_v2.0/java/src/Main.java:120:1: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m  symbol:   variable twoUname[0m
 [0m[[0m[31merror[0m] [0m[0m  location: class Main[0m
-[0m[[0m[31merror[0m] [0m[0m            System.out.println("player 1 won " + p1Score + " times");[0m
-[0m[[0m[31merror[0m] [0m[0m/projects/Tic-Tac-Toe/java/src/Main.java:42:1: cannot find symbol[0m
-[0m[[0m[31merror[0m] [0m[0m  symbol:   variable p2Score[0m
-[0m[[0m[31merror[0m] [0m[0m  location: class Main[0m
-[0m[[0m[31merror[0m] [0m[0m            System.out.println("Player 2 won " + p2Score + " times");[0m
-[0m[[0m[31merror[0m] [0m[0m/projects/Tic-Tac-Toe/java/src/Main.java:87:1: cannot find symbol[0m
-[0m[[0m[31merror[0m] [0m[0m  symbol:   variable p1Score[0m
-[0m[[0m[31merror[0m] [0m[0m  location: class Main[0m
-[0m[[0m[31merror[0m] [0m[0m                    p1Score++;[0m
-[0m[[0m[31merror[0m] [0m[0m/projects/Tic-Tac-Toe/java/src/Main.java:117:1: cannot find symbol[0m
-[0m[[0m[31merror[0m] [0m[0m  symbol:   variable p2Score[0m
-[0m[[0m[31merror[0m] [0m[0m  location: class Main[0m
-[0m[[0m[31merror[0m] [0m[0m                    p2Score++;[0m
+[0m[[0m[31merror[0m] [0m[0m                    System.out.println(twoUname + " Won");[0m

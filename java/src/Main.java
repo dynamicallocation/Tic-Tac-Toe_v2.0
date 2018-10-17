@@ -40,8 +40,9 @@ public class Main
         
         while(true)
         {
-            System.out.println("player 1 won " + p1Score + " times");
-            System.out.println("Player 2 won " + p2Score + " times");
+            Scoreboard scoreboard = new Scoreboard();
+            System.out.println(scoreboard.getunameOne() + " Won " + scoreboard.getp1Score() + "Times");
+            System.out.println(scoreboard.getunameTwo() + " Won " + scoreboard.getp2Score() + "Times");
             
               if(player.getP1() && player.getP2())
             {
@@ -84,10 +85,12 @@ public class Main
                 player.setTurn(false,true);
                 if(ref.checkWinner(theBoard))
                 {
+                    String unameOne = player.getunameOne();
+                    System.out.println(unameOne + " Won");
+                    scoreboard.setp1Score(p1Score++,unameOne);
                     player.setTurn(false,false);
                     player.setWinner(true,false);
-                    p1Score++;
-                    //Set Jlabel here
+                
                 }
                 else if(ref.checkDraw(theBoard))
                 {
@@ -113,11 +116,11 @@ public class Main
                 player.setTurn(true,false);
                if(ref.checkWinner(theBoard))
                 {
-                    System.out.println(player.getunameTwo() + " won");
+                    String unameTwo = player.getunameTwo();
+                    System.out.println(unameTwo + " Won");
+                    scoreboard.setp2Score(p2Score,unameTwo);
                     player.setTurn(false,false);
                     player.setWinner(false,true);
-                    p2Score++;
-                    //Set JLabel Here
                     
                 }
                 else if(ref.checkDraw(theBoard))
