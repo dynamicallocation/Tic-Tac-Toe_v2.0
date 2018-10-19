@@ -1,5 +1,8 @@
-public class Rules 
+import java.util.*;
+public class Rules
 {
+    //private static final String[][] Board2 = new String[3][3];///
+
     public void intro()
     {
         System.out.println("Welcome to Tic-Tac-Toe");
@@ -18,5 +21,23 @@ public class Rules
         System.out.println("\t10|11|12");
         System.out.println("\t---------");
         System.out.println("\t20|21|22");
+
+        System.out.println("\n\t00!01!02");
+        System.out.println("\t~~~~~~~~~");
+        System.out.println("\t10!11!12");
+        System.out.println("\t~~~~~~~~~");
+        System.out.println("\t20!21!22");
+
+
+        System.out.println("Select board design");
+        //System.out.println("'a' for default 'b' for alternative look");
+
+       /* Scanner sc = new Scanner(System.in);
+        String input = sc.nextLine();
+        if(input.equals("b")){
+
+
+        }*/
+
     }
 }

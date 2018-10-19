@@ -19,6 +19,15 @@ public class Main
         System.out.println("Player two please select a username");
         String usrTwo = sc.nextLine();
         Player player = new Player(usrOne,usrTwo);
+        /*if (sc.nextLine().isEmpty()){
+        System.out.println("No name was typed. Default names set");
+    }*/
+        if (player.equals(null)){
+        System.out.println("Please try again");
+
+
+        System.out.println();
+    }
         System.out.println("Player: heads or tails");
         System.out.println("Enter: 0 for heads, 1 for tails");
         int ansr = sc.nextInt();
@@ -71,9 +80,32 @@ public class Main
             {
                 System.out.println(player.getunameOne() + " Make your move");
                 board.displayBoard();
+                System.out.println("Need Help? y/n");
+                String input = sc.next();
+                if(input.equals("y")){
+                    System.out.println("TIP: ENTER A VALUE");
+                    System.out.println("\n\t(0,0)!(0,1)!(02)");
+                    System.out.println("\t~~~~~~~~~~~~~~~~");
+                    System.out.println("\t(1,0)!(1,1)!(1,2)");
+                    System.out.println("\t~~~~~~~~~~~~~~~~");
+                    System.out.println("\t(2,0)!(2,1)!(2,2)");
+
+                    System.out.println("*Game Info*");
+                    System.out.println("\n\t(row,column)!(row,column)!(row,column)");
+                    System.out.println("\t~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+                    System.out.println("\t(row,column)!(row,column)!(row,column)");
+                    System.out.println("\t~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+                    System.out.println("\t(row,column)!(row,column)!(row,column)");
+
+
+                }if(input.equals("n")){
+
+                }
                 System.out.println("enter a row");
                 int playerRow = sc.nextInt();
                 System.out.println("enter a column");
+
+
                 int playerColumn = sc.nextInt();
                 if(!board.updateBoard(playerRow,playerColumn,player.getFirst()))
                 {
